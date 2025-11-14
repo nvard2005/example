@@ -342,7 +342,7 @@ footer {
   font-weight: 400;
   font-size: clamp(15px, 1.8vw, 18px);
   line-height: 1.4;
-  color: #F8F9FE;
+  color: var(--v3-white);
   margin: 0;
   max-width: 320px;
 }
@@ -360,7 +360,6 @@ footer {
   color: #a9c8ff;
 }
 
-/* === TABLET (max-width: 992px) === */
 @media (max-width: 992px) {
   .blog-header {
     grid-template-columns: 1fr;

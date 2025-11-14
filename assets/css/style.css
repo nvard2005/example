@@ -265,16 +265,12 @@ footer {
   height: 16px;
 }
 
-
-/* === BLOG CARDS GRID === */
 .blog-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   margin-top: 40px;
 }
-
-/* === CARD === */
 .blog-card {
   position: relative;
   width: 100%;
@@ -398,7 +394,6 @@ footer {
   }
 }
 
-/* === MOBILE (max-width: 600px) === */
 @media (max-width: 600px) {
   .blog-inner {
     padding: 0 4%;
@@ -495,7 +490,6 @@ footer {
   font-weight: 600;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   .blog-detail-image img {
     aspect-ratio: 16 / 9;

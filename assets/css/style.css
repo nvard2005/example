@@ -190,8 +190,6 @@ footer {
     align-items: flex-start;
     gap: 24px;
 }
-
-/* === BLOG SECTION === */
 .blog-section {
   padding-top: var(--space-lg);
 }
@@ -202,8 +200,6 @@ footer {
   row-gap: clamp(28px, 4vw, 40px);
   padding: 0 5%;
 }
-
-/* === HEADER === */
 .blog-header {
   display: flex;
   flex-direction: row;
@@ -214,7 +210,6 @@ footer {
   height: 136px;
 }
 
-/* === TITLE + DESCRIPTION === */
 .blog-title {
   display: flex;
   flex-direction: column;
@@ -226,16 +221,14 @@ footer {
 .blog-title h2 {
   font-size: 40px;
   font-weight: 600;
-  color: #0a0a0a;
+  color: var(--v3-black);
   margin: 0;
 }
 
 .blog-title .title-description {
   font-size: var(--fs-xs);
-  color: #6b6b6b;
+  color: var(--v3-lightgray);
 }
-
-/* === DOWNLOAD BUTTONS === */
 .buttons {
   display: flex;
   flex-direction: row;
@@ -252,7 +245,7 @@ footer {
   background: linear-gradient(94.94deg, #2b43d9 20.83%, #0184ee 83.29%);
   border: none;
   border-radius: 100px;
-  color: #ffffff;
+  color: var(--v3-white);
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -288,7 +281,7 @@ footer {
   aspect-ratio: 3 / 2;
   border-radius: 20px;
   overflow: hidden;
-  background: #000;
+  background:var(--v3-black);
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -309,8 +302,6 @@ footer {
 .blog-card:hover img {
   transform: scale(1.04);
 }
-
-/* === OVERLAY (GRID-BASED) === */
 .news-content {
   position: absolute;
   inset: auto 0 0 0;
@@ -319,7 +310,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: end;
-  border-radius: 0 0 20px 20px;
+  border-radius: 20px;
+  margin: 10px;
   box-sizing: border-box;
   background: radial-gradient(
     70% 130% at 50% 0%,
@@ -341,7 +333,7 @@ footer {
   font-weight: 500;
   font-size: clamp(22px, 2.5vw, 26px);
   line-height: 1.3;
-  color: #F8F9FE;
+  color: var(--v3-white);
   margin: 0;
 }
 
@@ -355,7 +347,6 @@ footer {
   max-width: 320px;
 }
 
-/* === LEARN MORE BUTTON === */
 .learn-more {
   font-size: 14px;
   font-weight: 500;
@@ -485,7 +476,7 @@ footer {
 .blog-detail-content {
   display: grid;
   gap: 18px;
-  color: #0a0a0a;
+  color: var(--v3-black);
   font-size: var(--fs-xs);
   line-height: 170%;
   max-width: 900px;
@@ -495,13 +486,13 @@ footer {
 
 .blog-detail-content p {
   margin: 0;
-  color: #3a3a3a;
+  color: var(--v3-lightgray);
 }
 
 .blog-detail-content p strong,
 .blog-detail-content h3,
 .blog-detail-content h4 {
-  color: #0a0a0a;
+  color:  var(--v3-black);
   font-weight: 600;
 }
 

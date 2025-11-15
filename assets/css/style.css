@@ -5,6 +5,148 @@
     padding: 24px;
 }
 
+
+.contact-us {
+    padding: var(--space-md) 5%;
+    background: linear-gradient(135deg, #e8ffe8, #e3f2ff, #ffffff);
+}
+
+.contact-us-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+
+.contact-left {
+    display: grid;
+    gap: 32px;
+}
+
+.contact-us-head h1 {
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    color: var(--v3-black);
+    font-family: var(--ff-hervetica);
+    margin-bottom: 12px;
+}
+
+.contact-us-head .title-description {
+    font-size: var(--fs-xs);
+    color: var(--v3-lightgray);
+    line-height: 1.6;
+    max-width: 420px;
+}
+
+.blogs-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.contact-us-info {
+    display: grid;
+    gap: 16px;
+    padding-top: 10px;
+}
+
+.contact-us-info span {
+    background: rgba(195, 190, 190, 0.2);
+    padding: 14px 20px;
+    border-radius: var(--radius-md);
+    font-size: var(--fs-xs);
+    color: var(--v3-black);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-us-form {
+    background: radial-gradient(
+        70% 70% at 17% 50%,
+        rgba(3 99 155 / 95%) 0%,
+        rgba(10, 10, 60, 9) 45%,
+        rgba(10, 10, 10, 1) 100%
+    );
+    backdrop-filter: blur(12px);
+    padding: 36px;
+    border-radius: var(--radius-lg);
+    box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.35);
+    display: grid;
+    gap: 18px;
+}
+
+.contact-us-form h3 {
+    color: var(--v3-white);
+    font-size: var(--fs-xs);
+    opacity: 0.9;
+    margin-bottom: 14px;
+}
+
+.contact-us-form input,
+.contact-us-form textarea {
+    width: 100%;
+    background: var(--v3-white);
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    font-size: var(--fs-xs);
+}
+
+.contact-us-form textarea {
+    min-height: 90px;
+    resize: none;
+}
+
+.send-btn {
+    background: linear-gradient(95deg, #2b43d9, #0184ee);
+    border: none;
+    border-radius: 100px;
+    padding: 14px 0;
+    color: var(--v3-white);
+    font-size: var(--fs-xs);
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.send-btn:hover {
+    opacity: 0.9;
+}
+
+
+@media (max-width: 992px) {
+    .contact-us-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-us-head h1 {
+        font-size: var(--fs-md);
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-us {
+        padding: var(--space-lg) 4%;
+    }
+
+    .blogs-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .download-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-us-form {
+        padding: 28px;
+    }
+}
+
+
 .blogs {
     padding-top: var(--space-lg);
 }
@@ -55,7 +197,7 @@
 
 .download-button {
     position: relative;
-    width: 190px;
+    width: 200px;
     height: 43px;
     background: linear-gradient(94.94deg, #2b43d9 20.83%, #0184ee 83.29%);
     border: none;

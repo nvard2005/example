@@ -5,7 +5,6 @@
     padding: 24px;
 }
 
-
 .about-us {
   padding: var(--space-lg) 5%;
   width: 100%;
@@ -23,7 +22,7 @@
   font-size: var(--fs-lg);
   font-weight: 700;
   margin: 0 0 12px 0;
-  color:#000;
+  color:var(--v3-black);
 }
 
 .about-us .title-description {
@@ -37,14 +36,12 @@
     width: 100%;
 }
 
-/* add this — the missing part */
 .image-wrapper {
     position: relative;
     width: 100%;
     height: 500px;
 }
 
-/* reset figure spacing */
 .right-wrapper figure {
     margin: 0;
     padding: 0;
@@ -57,7 +54,6 @@
     object-fit: cover;
 }
 
-/* left image */
 .right-wrapper figure:nth-of-type(1) img {
     top: 60px;
     left: 0px;
@@ -103,32 +99,25 @@
         width: 190px;
     }
 }
-/* ============================
-   ABOUT US (SECOND SECTION)
-============================ */
+
 
 .aboutus {
-    padding: 120px 5%;
+   padding: var(--space-lg) 5%;
     background: radial-gradient(
         circle at 20% 20%,
         rgba(11, 20, 40, 1) 0%,
         rgba(5, 8, 15, 1) 60%,
         rgba(3, 5, 10, 1) 100%
     );
-    color: #ffffff;
+    color: var(--v3-white);
 }
 
 .aboutus-inner {
   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(441px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(441px, 1fr));
   grid-row-gap: 70px;
   align-items: center;
 }
-
-
-/* ============================
-   LEFT SIDE (IMAGE CARD)
-============================ */
 
 .left-side {
     position: relative;
@@ -137,29 +126,18 @@
     align-items: center;
 }
 
-.left-side figure {
-    margin: 0;
-    padding: 0;
-}
-
 .left-side img {
-    width: 420px;
     max-width: 100%;
     border-radius: 32px;
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.4);
     display: block;
 }
 
-
-/* ============================
-   RIGHT SIDE: TEXT
-============================ */
-
 .right-side h1 {
     font-size: clamp(32px, 4vw, 48px);
     font-weight: 600;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: var(--v3-white);
 }
 
 .right-side p {
@@ -170,7 +148,7 @@
 }
 
 .right-side ul {
-    list-style: none;      /* remove default bullets */
+    list-style: none;     
     padding: 0;
     margin: 20px 0 0;
     display: grid;
@@ -180,22 +158,21 @@
 
 .right-side ul li {
     position: relative;
-    padding-left: 22px;    /* space for the circle */
-    color: #d8d8d8;        /* light white/gray text */
+    padding-left: 22px;    
+    color: #d8d8d8;        
     font-size: 15px;
     line-height: 1.6;
 }
 
-/* white circle bullet */
 .right-side ul li::before {
     content: "";
     width: 7px;
     height: 7px;
-    background: #ffffff;
+    background: var(--v3-white);
     border-radius: 50%;
     position: absolute;
     left: 0;
-    top: 9px;              /* aligns perfectly with first text line */
+    top: 9px;             
 }
 
 @media (max-width: 992px) {
@@ -223,11 +200,10 @@
         width: 300px;
     }
 }
-/* SECTION WRAPPER */
+
 .functions {
     padding: var(--space-lg) 0;
-    position: relative;
-    font-family: var(--ff-hervetica);
+    
 }
 
 .functions-inner {
@@ -237,44 +213,27 @@
     padding: 0 5%;
 }
 
-/* TITLE */
 .functions-inner h1 {
     font-size: var(--fs-md);
     font-weight: 700;
     margin-bottom: var(--space-md);
-    color: #0b0b0b;
+    color: var(--v3-black);
 }
-
-/* CARDS WRAPPER */
 .functions-wrapper {
-    display: flex;
-    gap: 40px;
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-row-gap: clamp(28px, 4vw, 40px);
+  align-items: center;
 }
 
-/* SHARED CARD STYLE */
 .functions-wrapper .card-1,
 .functions-wrapper .card-2 {
     background: rgba(181, 255, 197, 0.25);
-    width: 260px;
+    max-width: 260px;
     padding: 28px;
     border-radius: var(--radius-lg);
-    box-shadow:
-        0 0 24px rgba(181, 255, 197, 0.4),
-        0 0 60px rgba(181, 255, 197, 0.25);
-    backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
     position: relative; /* important for top offset */
-}
-
-/* FIGURE (ICON BOX) */
-.functions-wrapper figure {
-    width: 46px;
-    height: 46px;
-    border-radius: var(--radius-md);
-    background: #e3fef0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 18px;
 }
 
 .functions-wrapper figure img {
@@ -282,32 +241,48 @@
     height: 24px;
 }
 
-/* TEXT */
 .functions-wrapper h3 {
     font-size: var(--fs-xs);
     margin-bottom: 6px;
     font-weight: 600;
-    color: #0b0b0b;
+    color: var(--v3-black);
 }
 
 .functions-wrapper span {
     font-size: calc(var(--fs-xs) - 4px);
-    color: #6d6d6d;
+    color: var(--v3-lightgray);
 }
-
-/* OFFSET CARDS TO MATCH YOUR DESIGN */
 .card-1 {
     top: 0;
 }
 
 .card-2 {
-    top: 40px; /* shift 2 cards down */
-}.feel-function {
-    width: 100%;
+    top: 40px;
+}
+@media (max-width: 768px) {
+
+    .functions-inner {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .functions-inner h1 {
+        font-size: var(--fs-sm);
+        margin-bottom: 32px;
+        line-height: 1.3;
+    }
+    .functions-wrapper {
+        justify-items: center;
+    }
+
+    .functions-wrapper .card-1,
+    .functions-wrapper .card-2 {
+        top: 0 !important;   }
+
+
+}
+.feel-function {
     padding: var(--space-lg) 0;
-    text-align: center;
-    position: relative;
-    font-family: var(--ff-hervetica);
 }
 
 .feel-function h1 {
@@ -318,25 +293,25 @@
     max-width: 600px;
     margin-inline: auto;
     line-height: 1.3;
+    text-align: center;
 }
 
-/* Main Flex Container */
+/* DESKTOP GRID */
 .feel-function-inner {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;         /* Always 2 columns on desktop */
+    gap: 60px 40px;
     align-items: center;
-    gap: 60px;
     width: 90%;
-    max-width: 1200px;
     margin: auto;
 }
 
-/* LEFT — PHONE IMAGE */
+/* PHONE SIDE */
 .rightside {
-    position: relative;
-    width: 45%;
+    width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .rightside figure {
@@ -345,7 +320,7 @@
     max-width: 380px;
 }
 
-/* Blue rounded shape behind phone */
+/* Blue rounded shape */
 .rightside figure::before {
     content: "";
     position: absolute;
@@ -365,31 +340,48 @@
     object-fit: contain;
 }
 
-/* RIGHT — TEXT LIST */
-.leftside ul {
-    margin: 0;
-    padding-left: 1.2rem; /* required for bullets to show */
+/* LIST TEXT */
+.leftside {
+    width: 100%;
 }
+
 .leftside ul {
-    list-style-type: disc;     /* Makes the bullets circular */
-    list-style-position: outside;
-    padding-left: 24px;        /* Space from left so bullet is visible */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .leftside ul li {
     position: relative;
-    padding-left: 14px;
+    padding-left: 16px;
+    font-size: var(--fs-xs);
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
+/* Custom bullet */
 .leftside ul li::before {
     content: "";
     width: 6px;
     height: 6px;
-    background: #000;
+    background: var(--v3-black);
     border-radius: 50%;
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 9px;
+}
+@media (max-width: 768px) {
+    .feel-function-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        padding: 0 20px;
+    }
+  
+    .rightside figure {
+        max-width: 280px;
+    }
 }
 
 
